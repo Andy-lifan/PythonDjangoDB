@@ -1,0 +1,49 @@
+{% load static %}
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home - Pet Medicine</title>
+        <link rel="stylesheet" id="ample-style-css" href="{% static 'style.css' %}" type="text/css" media="all">
+    </head>
+    <body class="wide">
+        <div id="page" class="hfeed site">
+            <header>
+                <div class="header">
+                    <div class="main-head-wrap inner-wrap clearfix">
+                        <div id="header-logo-image">
+                            <a href="/">
+                                <img src="{% static 'logo.png' %}" alt="Pet Medicine">
+                            </a>
+                        </div>
+                        <div id="header-text" class="">
+                            <h1 id="site-title">
+                                <a href="/" title=" Pet Medicine" rel="home"> Pet Medicine</a>
+                            </h1>
+                            <p>We treat your pets like we treat our own.</p>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/header.jpg' %}" alt=" Pet Medicine">
+                </div>
+            </header>
+            <div class="main-wrapper">
+                <div class="single-page clearfix">
+                    <div class="inner-wrap">
+                        <p>Pet Medicine strives to blend the best in traditional and alternative medicine</p>
+                        <hr>
+                        <div>
+                        {% block content%}
+                        {% endblock %}
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <footer id="colophon">
+                <div class="inner-wrap">                    
+                     this pets app is solely for the purpose of training.
+                </div>                 
+            </footer>
+        </div>
+        <script src="{% static 'main.js' %}"></script>
+    </body>
+</html>

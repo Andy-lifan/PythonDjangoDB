@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    {% for student in students %}
+        <div className="studentname">            
+            <h3>{{student.first_name|capfirst }}</h3>
+            </a>
+            <p>{{ student.last_name }}</p>
+            <p>{{ student.contact }}</p>
+            {% if student.email %}
+                <p>Email: {{ student.email }}</p>
+            {% endif %}
+            <p class="toggled-from-hidden">{{ student.age }}</p>
+        </div>
+        
+    {% endfor %}
+</div>
+{% endblock %}
